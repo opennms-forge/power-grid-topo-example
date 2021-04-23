@@ -1,0 +1,28 @@
+{% set visible = edge != null && edge.namespace == "powergrid:switches" %}
+{% set title = "Switch Details" %}
+
+<style>
+table.powergrid { border-collapse: collapse; }
+td.powergrid + td.powergrid,
+th.powergrid + th.powergrid { border-left: 1px dotted black; padding-left: 5px;  }
+.incomplete { background-color: #eeee11; }
+</style>
+
+<table width="100%" class="powergrid">
+    <col width="125px">
+    <tr>
+        <td class="powergrid">A TX Freq.</td>
+        <td class="powergrid incomplete">10995</td>
+        <td class="powergrid incomplete">11035</td>
+    </tr>
+    <tr>
+        <td class="powergrid">Z TX Freq.</td>
+        <td class="powergrid incomplete">11485</td>
+        <td class="powergrid incomplete">11525</td>
+    </tr>
+    <tr>
+        <td class="powergrid">Actual Modulation</td>
+        <td class="powergrid incomplete" colspan="2">64 QAM</td>
+    </tr>
+</table>
+</table>

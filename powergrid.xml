@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns
+     http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+    <!-- Key section -->
+    <key id="label" for="graphml" attr.name="label" attr.type="string"></key>
+    <key id="label" for="graph" attr.name="label" attr.type="string"></key>
+    <key id="label" for="node" attr.name="label" attr.type="string"></key>
+    <key id="description" for="graph" attr.name="description" attr.type="string"></key>
+    <key id="namespace" for="graph" attr.name="namespace" attr.type="string"></key>
+    <key id="preferred-layout" for="graph" attr.name="preferred-layout" attr.type="string"></key>
+    <key id="focus-strategy" for="graph" attr.name="focus-strategy" attr.type="string"></key>
+    <key id="focus-ids" for="graph" attr.name="focus-ids" attr.type="string"></key>
+    <key id="semantic-zoom-level" for="graph" attr.name="semantic-zoom-level" attr.type="int"/>
+
+    <!-- Label for Topology Selection menu -->
+    <data key="label">PowerGrid</data>
+    <graph id="cities">
+        <data key="namespace">powergrid:cities</data>
+        <data key="label">Cities</data>
+        <data key="description">The Cities Layer.</data>
+        <data key="preferred-layout">Circle Layout</data>
+        <data key="focus-strategy">ALL</data>
+        <node id="macondo">
+            <data key="label">Macondo</data>
+        </node>
+        <node id="lilliput">
+            <data key="label">Lilliput</data>
+        </node>
+        <node id="avonlea">
+            <data key="label">Avonlea</data>
+        </node>
+    </graph>
+    <graph id="transformers">
+        <data key="namespace">powergrid:transformers</data>
+        <data key="description">The Transformers Layer.</data>
+        <data key="label">Transformers</data>
+        <data key="semantic-zoom-level">1</data>
+        <data key="focus-strategy">ALL</data>
+        <node id="eastwick">
+            <data key="label">Eastwick</data>
+        </node>
+        <node id="gotham">
+            <data key="label">Gotham</data>
+        </node>
+
+        <!-- Edges in this layer -->
+        <edge id="eastwick.gotham" source="eastwick" target="gotham"/>
+
+        <!-- Edges to pointing to this layer -->
+        <edge id="lilliput.eastwick" source="lilliput" target="eastwick"/>
+        <edge id="lilliput.gotham" source="lilliput" target="gotham"/>
+    </graph>
+    <graph id="substations">
+        <data key="namespace">powergrid:substations</data>
+        <data key="description">The Substations Layer.</data>
+        <data key="label">Substations</data>
+        <data key="semantic-zoom-level">1</data>
+        <data key="focus-strategy">ALL</data>
+        <node id="winterfell">
+            <data key="label">Winterfell</data>
+        </node>
+        <node id="bedrock">
+            <data key="label">Bedrock</data>
+        </node>
+        <node id="albion">
+            <data key="label">Albion</data>
+        </node>
+        <node id="xanadu">
+            <data key="label">Xanadu</data>
+        </node>
+
+        <!-- Edges to pointing to this layer -->
+        <edge id="eastwick.winterfell" source="eastwick" target="winterfell"/>
+        <edge id="eastwick.bedrock" source="eastwick" target="bedrock"/>
+        <edge id="eastwick.albion" source="eastwick" target="albion"/>
+        <edge id="eastwick.xanadu" source="eastwick" target="xanadu"/>
+        <edge id="gotham.albion" source="gotham" target="albion"/>
+        <edge id="gotham.xanadu" source="gotham" target="xanadu"/>
+    </graph>
+    <graph id="switches">
+        <data key="namespace">powergrid:switches</data>
+        <data key="description">The Switches Layer.</data>
+        <data key="label">Switches</data>
+        <data key="semantic-zoom-level">1</data>
+        <data key="focus-strategy">ALL</data>
+        <node id="hobbiton_m">
+            <data key="label">Hobbiton M</data>
+        </node>
+        <node id="eastwick_m">
+            <data key="label">Eastwick M</data>
+        </node>
+        <node id="endor_c">
+            <data key="label">Endor C</data>
+        </node>
+        <node id="oz_m">
+            <data key="label">Oz M</data>
+        </node>
+
+        <!-- Edges in this layer -->
+        <edge id="endor_c.oz_m" source="endor_c" target="oz_m"/>
+
+        <!-- Edges to pointing to this layer -->
+        <edge id="bedrock.hobbiton_m" source="bedrock" target="hobbiton_m"/>
+        <edge id="bedrock.eastwick_m" source="bedrock" target="eastwick_m"/>
+        <edge id="bedrock.endor_c" source="bedrock" target="endor_c"/>
+        <edge id="bedrock.oz_m" source="bedrock" target="oz_m"/>
+    </graph>
+</graphml>

@@ -1,0 +1,14 @@
+{% set visible = edge != null && edge.namespace == "powergrid:switches" %}
+{% set title = "Switch Link Legend" %}
+{% set order = 100 %}
+
+<table border="0">
+    <tr>
+        <td>
+            <svg width="30" height="30">
+                <line x1="0" y1="15" x2="30" y2="15" style="stroke:green;stroke-width:6" />
+            </svg>
+        </td>
+        <td>Link is up</td>
+    </tr>
+</table>
